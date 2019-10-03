@@ -130,9 +130,9 @@ class SnowflakeHook(BaseHook):
 
     def execute_sql(self, query, database=None, role=None):
         cs = self.get_conn().cursor()
-        cs.execute("USE WAREHOUSE {0}".format(self.warehouse))
-        cs.execute("USE DATABASE {0}".format(database or self.database))
-        cs.execute("USE ROLE {0}".format(role or self.role))
+        #cs.execute("USE WAREHOUSE {0}".format(self.warehouse))
+        #cs.execute("USE DATABASE {0}".format(database or self.database))
+        #cs.execute("USE ROLE {0}".format(role or self.role))
         if isinstance(query, list):
             query_sequence = query
         else:
